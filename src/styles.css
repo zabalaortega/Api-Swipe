@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+*:root{
+    --header: rgb(51, 163, 197);
+    --title: rgb(243, 235, 235);
+    --color-fuente: rgb(226, 214, 214);
+}
+body{
+    margin: 0;
+    background: var(--color-fuente);
+}
+
+.header{
+    background: var(--header);
+    margin-block-end: 2em;
+}
+
+.wrapper{
+    padding-inline-end: 2em;
+    padding-inline-start: 2em;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--title);
+    text-transform: uppercase;
+    text-shadow: 2px 7px 5px rgb(217, 221, 223);
+}
+
+ul{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--title);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.section{
+    border: 1px solid red;
+}
