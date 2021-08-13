@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { FilmModule } from './pages/film/film.module';
-import { CharacterModule } from './pages/character/character.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +13,8 @@ import { CharacterModule } from './pages/character/character.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    FilmModule,
-    CharacterModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
