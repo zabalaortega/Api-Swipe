@@ -1,6 +1,6 @@
 export interface Films {
     name: string;
-    episode_number: number;
+    episode_id: number;
     director: string;
     characters: string[];
 }

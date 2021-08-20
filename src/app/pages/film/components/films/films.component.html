@@ -1,1 +1,13 @@
-<p>films works!</p>
+<div class="list-container">
+    <h1 class="title">Peliculas</h1>
+    <div class="list">
+        <div class="card" *ngFor="let film of films">
+            <div class="card-title">{{film.title}}</div>
+            <div class="card-subtitle">Episodio # {{film.episode_id}}</div>
+            <div class="card-body">Director: {{film.director}}</div>
+            <div class="card-footer">
+                <a class="card-button" [routerLink]="['/films', film.title]" routerLinkActive="active">Ver Personajes</a>
+            </div>
+        </div>
+    </div>
+</div>

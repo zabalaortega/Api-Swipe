@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Films } from '../models/films';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { Results } from '../models/results';
 
 @Injectable({
   providedIn: 'root'
@@ -16,10 +17,12 @@ export class FilmsService {
     private http: HttpClient
   ) { }
 
-  // tslint:disable-next-line: typedef
-  getAllFilms(){
+  getAllFilms(): Observable<Films[]>{
     return this.http
-      .get('https://swapi.dev/api/films');
+      .get(`${this.url}`)
+      .pipe(
+        map( (resp: Results) => resp.results)
+      );
   }
 
 }

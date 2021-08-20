@@ -1,1 +1,18 @@
-<p>character works!</p>
+<div class="list-container">
+  <h1 class="title">Peliculas</h1>
+  <div class="list">
+    <div class="card" *ngFor="let character of characters">
+      <div class="card-title">{{ character.name }}</div>
+      <div class="card-subtitle">Gender: {{ character.gender }}</div>
+      <div class="card-body">color Ojo: {{ character.eye_color }}</div>
+      <div class="card-footer">
+        <a
+          class="card-button"
+          [routerLink]="['/characters', character.title]"
+          routerLinkActive="active"
+          >Ver Peliculas Asociadas</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

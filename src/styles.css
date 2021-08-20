@@ -12,11 +12,13 @@ body{
 .header{
     background: var(--header);
     margin-block-end: 2em;
+    width: 100%;
 }
 
 .wrapper{
-    padding-inline-start: 2em;
-    padding-inline-end: 2em;
+    /* padding-inline-start: 2em;
+    padding-inline-end: 2em; */
+    padding: 0 40px;
 }
 
 .header-content{
@@ -47,5 +49,60 @@ ul{
 }
 
 .section{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
+
+.list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    width: 100%;
+}
+
+.card{
+    width: 100%;
+    padding-block-start: 1em;
+    padding-block-end: 1em;
+    padding-inline-start: 10px;
+    border-radius: 10px;
+    background: rgb(217, 221, 223);
+    box-shadow: 1px 1px 15px rgb(105, 153, 177);
+}
+
+.card-title{
+    color: rgb(50, 52, 53);
+    font-size: 2em;
+    margin-block-end: .5em;
+    font-weight: 600;
+}
+
+.card-subtitle{
+    color: rgb(51, 163, 197);
+    font-size: 1.3em;
+    margin-block-end: 5px;
+}
+
+.card-body{
+    color: rgba(45, 47, 54, 0.383);
+    font-size: 1em;
+    margin-block-end: 15px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center
+    ;
+}
+
+.card-button{
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    background: rgba(68, 75, 168, 0.377);
+    color: rgb(26, 111, 153);
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
